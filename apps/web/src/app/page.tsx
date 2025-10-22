@@ -2,6 +2,6 @@ import { Sketch } from "@/components/Sketch";
 
 export default function Page() {
   return (
-    <Sketch />
+    <Sketch sketchName="dawn1" />
   );
 }
