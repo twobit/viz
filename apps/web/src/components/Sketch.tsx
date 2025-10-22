@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const sketches = {
   flare1: async () => (await import("@/sketches/flare-1")).default,
   dawn1: async () => (await import("@/sketches/nested/dawn-1")).default,
+  genuary1: async () => (await import("@/sketches/genuary/genuary-1")).default,
 };
 
 export const Sketch = ({
