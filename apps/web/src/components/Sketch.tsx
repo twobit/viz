@@ -5,15 +5,19 @@ import { WebGPUApp } from "./canvas/webgpu-app";
 import { useEffect, useState } from "react";
 
 const sketches = {
-  flare1: async () => (await import("@/sketches/flare-1")).default,
-  dawn1: async () => (await import("@/sketches/nested/dawn-1")).default,
-  genuary1: async () => (await import("@/sketches/genuary/genuary-1")).default,
+  flare1: async () => (await import("@/sketches/flare1")).default,
+  dawn1: async () => (await import("@/sketches/nested/dawn1")).default,
+  mesh1: async () => (await import("@/sketches/mesh1")).default,
+  genuary1: async () => (await import("@/sketches/genuary/genuary1")).default,
+  genuary30: async () => (await import("@/sketches/genuary/genuary30")).default,
 };
+
+export type SketchName = keyof typeof sketches;
 
 export const Sketch = ({
   sketchName = "flare1",
 }: {
-  sketchName?: keyof typeof sketches;
+  sketchName?: SketchName;
 }) => {
   const [sketch, setSketch] = useState<any>(null);
 
