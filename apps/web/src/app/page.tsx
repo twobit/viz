@@ -1,8 +1,7 @@
-import { Sketch, SketchName } from "@/components/sketch";
-
-export default function Page({ searchParams }: { searchParams: { sketch: string } }) {
-  const sketch = searchParams.sketch as SketchName || "flare1";
+export default function HomePage() {
   return (
-    <Sketch sketchName={sketch} />
+    <div>
+      <h1>Home</h1>
+    </div>
   );
 }
